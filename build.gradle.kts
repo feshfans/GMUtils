@@ -1,12 +1,17 @@
 plugins {
-    id("java")
+    application
 }
 
 group = "com.feshfans"
 version = "1.0-SNAPSHOT"
 
+
 repositories {
     mavenCentral()
+    maven {
+        url = uri("/Users/feshfans/Software/maven-repo")
+        url = uri("/Users/feshfans/Workspace/GMUtils/lib")
+    }
 }
 
 dependencies {
@@ -14,6 +19,7 @@ dependencies {
     implementation ("org.bouncycastle:bcprov-jdk15on:1.70")
     implementation("org.bouncycastle:bcpkix-jdk15on:1.70")
     implementation("org.zz:gmhelper:0.0.1-SNAPSHOT")
+
 
     testImplementation("org.junit.jupiter:junit-jupiter-api:5.8.1")
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.8.1")
